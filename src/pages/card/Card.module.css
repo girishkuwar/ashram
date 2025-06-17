@@ -1,0 +1,60 @@
+
+.card {
+    transition: 1s;
+    position: absolute;
+    right: 20px;
+    padding: 51px 56px;
+    width: 478px;
+    height: 280px;
+    background: #d4d4d4;
+    box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.25);
+}
+
+h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 13px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 13px;
+    margin-bottom: 45px;
+}
+
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 7px 0;
+}
+
+.card img {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    opacity: .6;
+}
+
+.card .bg {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width:720px) {
+    .card {
+        position: relative;
+        right: 0;
+    }
+}

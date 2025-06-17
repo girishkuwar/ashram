@@ -1,0 +1,73 @@
+.home {
+    padding: 50px 3%;
+}
+
+.home marquee {
+    font-size: larger;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.home ul {
+    max-height: 85vh;
+    overflow: scroll;
+}
+
+.shortlist {
+    height: 25vh;
+}
+
+.home li {
+    display: block;
+    width: 150px;
+    margin: 10px 0;
+    background-color: white;
+    padding: 5px 20px;
+    text-align: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+
+.home ul::-webkit-scrollbar {
+    display: none;
+}
+
+.employesList li {
+    width: 300px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.list_section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px;
+}
+
+@media screen and (max-width:720px) {
+    .home marquee {
+        font-size: small;
+        top: 70px;
+    }
+
+    .list_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .home ul {
+        height: max-content;
+    }
+
+    .home ul:nth-child(3) {
+        height: 50vh;
+    }
+}
