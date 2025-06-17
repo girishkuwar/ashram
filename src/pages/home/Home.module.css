@@ -58,18 +58,21 @@
         top: 70px;
     }
 
-   
-
     .home li {
-        width: 100px;
+        width: 90%;
+    }
+    .home h4 {
+        font-size: .9rem;
     }
 
+
      .employesList li {
-        width: 120px;
+        width: 90%;
     }
 
     .list {
         margin: 0 5px;
+        width: 31%;
     }
 
     .list_section {
@@ -81,7 +84,8 @@
     }
 
     .home ul {
-        height: max-content;
+        height: 90%;
+        width: 100%;
     }
 
     .home ul:nth-child(3) {

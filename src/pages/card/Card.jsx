@@ -1,7 +1,6 @@
 import React from 'react'
 import style from "./Card.module.css"
 import logo from "../../assets/kalyanAshram_logo.png"
-import bg from "../../assets/business-card-background.jpg"
 
 const Card = ({employeDetailes}) => {
     return (
@@ -12,7 +11,6 @@ const Card = ({employeDetailes}) => {
             <p>{employeDetailes.contact_no}</p>
             <p>Email : {employeDetailes.email}</p>
             <img src={logo} alt=""></img>
-            <img className={style.bg} src={bg} alt="" />
         </div>
     )
 }

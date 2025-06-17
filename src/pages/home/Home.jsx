@@ -101,7 +101,7 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className={style.list}>
-                    <h4>DISTRICT</h4>
+                    {(districtsList.length > 0) && <h4>DISTRICT</h4>}
                     <ul>
                         {
                             districtsList.map((e, index) => {
@@ -109,7 +109,7 @@ const Home = () => {
                             })
                         }
                     </ul>
-                    <h4>Prant Workers</h4>
+                    {(prant_employes.length > 0) && <h4>Prant Workers</h4>}
                     <ul>
                         {
                             prant_employes.map((e, index) => {
@@ -119,7 +119,8 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className={style.list}>
-                    <h4>EMPLOYES</h4>
+                    {(employesList.length > 0) && <h4>EMPLOYES</h4>}
+                    
                     <ul className={style.employesList}>
                         {
                             employesList.map((e, index) => {
