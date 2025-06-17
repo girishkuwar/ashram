@@ -58,9 +58,26 @@
         top: 70px;
     }
 
+   
+
+    .home li {
+        width: 100px;
+    }
+
+     .employesList li {
+        width: 120px;
+    }
+
+    .list {
+        margin: 0 5px;
+    }
+
     .list_section {
         display: flex;
         flex-wrap: wrap;
+    }
+    .home li {
+        font-size: .7rem;
     }
 
     .home ul {
