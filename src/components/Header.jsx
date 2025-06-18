@@ -11,8 +11,8 @@ const Header = () => {
                 <h1>जनजाति कल्याण आश्रम</h1>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <NavLink to={"/"}></NavLink>
+                <li><NavLink to={"/"}>Home</NavLink></li>
+                
                 <li><a href="#">कार्यकारिणी</a></li>
                 <li><a href="#">Contact US</a></li>
             </ul>
