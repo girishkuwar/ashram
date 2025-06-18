@@ -1,5 +1,8 @@
 .home {
     padding: 50px 3%;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(../../assets/sart.jpg);
 }
 
 .home marquee {
@@ -7,10 +10,11 @@
     position: absolute;
     top: 100px;
     left: 0;
+    color: aliceblue;
 }
 
 .home ul {
-    max-height: 85vh;
+    max-height: 75vh;
     overflow: scroll;
 }
 
@@ -21,11 +25,12 @@
 .home li {
     display: block;
     width: 150px;
-    margin: 10px 0;
+    margin: 5px 0;
     background-color: white;
     padding: 5px 20px;
     text-align: center;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
 }
 
 
@@ -43,6 +48,17 @@
     display: flex;
     align-items: flex-start;
 }
+.home .list h4 {
+    color: white;
+    background-color: rgb(78, 78, 78);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.home .list h4:hover {
+        background-color: rgb(128, 127, 127);
+}
+
 
 .list {
     display: flex;

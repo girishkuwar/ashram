@@ -14,6 +14,9 @@ const Home = () => {
     const [selected, setSelected] = useState(null);
     const [employeDetailes, setEmployeDetailes] = useState([]);
 
+    const [showDistrict, setShowDistrict] = useState(false);
+    const [showPrantEmp, setShowPrantEmp] = useState(false);
+
     const [prant_employes, setPrant_employes] = useState([]);
     const [selectedPrant_Employe, setSelectedPrant_Employe] = useState(null);
 
@@ -101,26 +104,28 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className={style.list}>
-                    {(districtsList.length > 0) && <h4>DISTRICT</h4>}
-                    <ul>
-                        {
-                            districtsList.map((e, index) => {
-                                return <li style={{ backgroundColor: selectedDist === index ? '#697783' : 'white', color: selectedDist === index ? 'white' : 'black' }} onClick={() => { getEmployes(e.id); setSelectedDist(index); }} key={e.id}>{e.name}</li>
-                            })
-                        }
-                    </ul>
-                    {(prant_employes.length > 0) && <h4>Prant Workers</h4>}
-                    <ul>
-                        {
-                            prant_employes.map((e, index) => {
-                                return <li style={{ backgroundColor: selectedPrant_Employe === index ? '#697783' : 'white', color: selectedPrant_Employe === index ? 'white' : 'black' }} onClick={() => { setEmployeDetailes(e); setSelectedPrant_Employe(index); }} key={e.id}>{e.name}</li>
-                            })
-                        }
-                    </ul>
+                    {(districtsList.length > 0) && <h4 onClick={() => setShowDistrict(!showDistrict)}>DISTRICT ^</h4>}
+                    {(showDistrict) &&
+                        <ul>
+                            {
+                                districtsList.map((e, index) => {
+                                    return <li style={{ backgroundColor: selectedDist === index ? '#697783' : 'white', color: selectedDist === index ? 'white' : 'black' }} onClick={() => { getEmployes(e.id); setSelectedDist(index); }} key={e.id}>{e.name}</li>
+                                })
+                            }
+                        </ul>}
+                    {(prant_employes.length > 0) && <h4 onClick={() => setShowPrantEmp(!showPrantEmp)}>Prant Workers ^</h4>}
+                    {(showPrantEmp) &&
+                        <ul>
+                            {
+                                prant_employes.map((e, index) => {
+                                    return <li style={{ backgroundColor: selectedPrant_Employe === index ? '#697783' : 'white', color: selectedPrant_Employe === index ? 'white' : 'black' }} onClick={() => { setEmployeDetailes(e); setSelectedPrant_Employe(index); }} key={e.id}>{e.name}</li>
+                                })
+                            }
+                        </ul>}
                 </div>
                 <div className={style.list}>
                     {(employesList.length > 0) && <h4>EMPLOYES</h4>}
-                    
+
                     <ul className={style.employesList}>
                         {
                             employesList.map((e, index) => {
