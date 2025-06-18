@@ -13,7 +13,7 @@ const Header = () => {
             <ul>
                 <li><NavLink to={"/"}>Home</NavLink></li>
                 
-                <li><a href="#">कार्यकारिणी</a></li>
+                <li><NavLink to={"/info"}>कार्यकारिणी</NavLink></li>
                 <li><a href="#">Contact US</a></li>
             </ul>
             <button>MENU</button>

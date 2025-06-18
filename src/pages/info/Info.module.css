@@ -5,6 +5,10 @@
     background-color: rgb(212, 212, 212);
 }
 
+.infopage::-webkit-scrollbar {
+    display: none;
+}
+
 .starting_info {
     margin: 20px 25px;
     width: 45%;
@@ -18,7 +22,7 @@
 
 .fullcircle {
     position: absolute;
-    left: 56%;
+    left: 53%;
     top: 20%;
     height: 566px;
     width: 566px;
