@@ -1,4 +1,4 @@
-import { addDoc, collection, onSnapshot, query, where } from 'firebase/firestore';
+import { addDoc, collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase.config';
 import style from "./Home.module.css"
@@ -53,7 +53,7 @@ const Home = () => {
     const getEmployes = (id) => {
         setSelected(null);
         setSelectedPrant_Employe(null);
-        const q = query(collection(db, "employes"), where("district_id", "==", id));
+        const q = query(collection(db, "employes"), orderBy("rollno", "asc"), where("district_id", "==", id));
         const unsub = onSnapshot(q, (querySnapshot) => {
             let products = [];
             querySnapshot.forEach((doc) => {
@@ -104,21 +104,22 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className={style.list}>
-                    {(districtsList.length > 0) && <h4 onClick={() => setShowDistrict(!showDistrict)}>DISTRICT ^</h4>}
-                    {(showDistrict) &&
-                        <ul>
-                            {
-                                districtsList.map((e, index) => {
-                                    return <li style={{ backgroundColor: selectedDist === index ? '#697783' : 'white', color: selectedDist === index ? 'white' : 'black' }} onClick={() => { getEmployes(e.id); setSelectedDist(index); }} key={e.id}>{e.name}</li>
-                                })
-                            }
-                        </ul>}
+
                     {(prant_employes.length > 0) && <h4 onClick={() => setShowPrantEmp(!showPrantEmp)}>Prant Workers ^</h4>}
                     {(showPrantEmp) &&
                         <ul>
                             {
                                 prant_employes.map((e, index) => {
                                     return <li style={{ backgroundColor: selectedPrant_Employe === index ? '#697783' : 'white', color: selectedPrant_Employe === index ? 'white' : 'black' }} onClick={() => { setEmployeDetailes(e); setSelectedPrant_Employe(index); }} key={e.id}>{e.name}</li>
+                                })
+                            }
+                        </ul>}
+                    {(districtsList.length > 0) && <h4 onClick={() => setShowDistrict(!showDistrict)}>DISTRICT ^</h4>}
+                    {(showDistrict) &&
+                        <ul>
+                            {
+                                districtsList.map((e, index) => {
+                                    return <li style={{ backgroundColor: selectedDist === index ? '#697783' : 'white', color: selectedDist === index ? 'white' : 'black' }} onClick={() => { getEmployes(e.id); setSelectedDist(index); }} key={e.id}>{e.name}</li>
                                 })
                             }
                         </ul>}

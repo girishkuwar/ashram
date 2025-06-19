@@ -14,6 +14,7 @@ const Header = () => {
                 <li><NavLink to={"/"}>Home</NavLink></li>
                 
                 <li><NavLink to={"/info"}>कार्यकारिणी</NavLink></li>
+                <li><NavLink to={"/prant"}>प्रांत सूची</NavLink></li>
                 <li><a href="#">Contact US</a></li>
             </ul>
             <button>MENU</button>
