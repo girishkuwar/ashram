@@ -9,6 +9,10 @@ import Prant from './pages/deepdive/Prant'
 import Division from './pages/deepdive/Division'
 import District from './pages/deepdive/District'
 import Vilages from './pages/deepdive/Vilages'
+import Admin from './admin/Admin'
+import AddData from './admin/AddData'
+import VilageInfo from './pages/deepdive/VilageInfo'
+import ProjectInfo from './pages/deepdive/ProjectInfo'
 
 function App() {
 
@@ -24,6 +28,11 @@ function App() {
             <Route path='/district/:id' element={<District/>}/>
             <Route path='/division/:id' element={<Division/>}/>
             <Route path='/vilages/:id' element={<Vilages/>}/>
+            <Route path='/vilageinfo/:id' element={<VilageInfo/>}/>
+            <Route path='/projectinfo/' element={<ProjectInfo/>}/>
+          </Route>
+          <Route path='/a1d1m1i1n' element={<Admin/>}>
+            <Route index element={<AddData/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

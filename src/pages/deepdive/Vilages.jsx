@@ -62,7 +62,7 @@ const Vilages = () => {
                         <tbody>
                             {
                                 list.map((e, i) => {
-                                    return <tr>
+                                    return <tr onClick={() => { navigate(`/vilageinfo/${e.id}`) }}>
                                         <td className={style.no}>{i + 1} &#10749;</td>
                                         <td>{e.name}</td>
                                     </tr>

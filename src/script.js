@@ -19,6 +19,9 @@ const data = [
     "मोहपाडा (न.व.)", "मोकभाणगी", "मुलानेवाणी", "नकोडे", "नलिद", "नंदुरी", "नारुळ", "नवी बेज"
 ];
 
+
+
+
 const looper = () => {
     data.map(async (e) => {
         // if (window.confirm("Are You Sure To add " + e.name)) {
