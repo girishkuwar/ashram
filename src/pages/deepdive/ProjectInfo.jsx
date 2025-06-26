@@ -68,7 +68,7 @@ const ProjectInfo = () => {
     return (
         <div className={style.deepdive}>
             <div className={style.background}>
-                <h1 className={style.minheader}>गाव : {bgBigName.name}</h1>
+                <h1 className={style.minheader}>{bgBigName.name}</h1>
                 <h1>{projectNametranslate[project]}</h1>
             </div>
             <div className={style.infocard}>

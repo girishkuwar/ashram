@@ -10,9 +10,13 @@ import Division from './pages/deepdive/Division'
 import District from './pages/deepdive/District'
 import Vilages from './pages/deepdive/Vilages'
 import Admin from './admin/Admin'
-import AddData from './admin/AddData'
 import VilageInfo from './pages/deepdive/VilageInfo'
 import ProjectInfo from './pages/deepdive/ProjectInfo'
+import AddPrant from './admin/AddPrant'
+import Report from './admin/Report'
+import AddDist from './admin/AddDist'
+import AddDiv from './admin/AddDiv'
+import AddVilage from './admin/AddVilage'
 
 function App() {
 
@@ -31,8 +35,12 @@ function App() {
             <Route path='/vilageinfo/:id' element={<VilageInfo/>}/>
             <Route path='/projectinfo/' element={<ProjectInfo/>}/>
           </Route>
-          <Route path='/a1d1m1i1n' element={<Admin/>}>
-            <Route index element={<AddData/>}/>
+          <Route path='/admin' element={<Admin/>}>
+            <Route index element={<Report/>}/>
+            <Route path='addprant' element={<AddPrant/>}/>
+            <Route path='adddistrict' element={<AddDist/>}/>
+            <Route path='adddivision' element={<AddDiv/>}/>
+            <Route path='addvilage' element={<AddVilage/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

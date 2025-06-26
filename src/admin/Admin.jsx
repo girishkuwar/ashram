@@ -3,6 +3,8 @@ import style from "./Admin.module.css"
 import logo from "../assets/kalyanAshram_logo.png"
 import { useState } from 'react'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import AddData from './AddPrant';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const Admin = () => {
     const [email, setEmail] = useState("");
@@ -26,8 +28,23 @@ const Admin = () => {
             });
     }
 
-    return (<>
-        {(auth === 1) ? <h1>DONE</h1> : <>
+    return (<div className={style.admin}>
+        {/* {(auth === 1) ? <> */}
+        <h1>Vanvasi Kalyan Ashram</h1>
+        <nav>
+            <ul>
+                <li><NavLink to={"/admin"}>Dashboard</NavLink></li>
+                <li><NavLink to={"addprant"}>प्रांत जोडा</NavLink></li>
+                <li><NavLink to={"adddistrict"}>जिल्हा जोडा</NavLink></li>
+                <li><NavLink to={"adddivision"}>तालुका जोडा</NavLink></li>
+                <li><NavLink to={"addvilage"}>गाव जोडा</NavLink></li>
+                <li><NavLink to={"addworker"}>कार्यकर्ता जोडा</NavLink></li>
+            </ul>
+        </nav>
+        <div className={style.admin_container}>
+         <Outlet />
+        </div>
+        {/* </> : <>
             <div className={style.container}>
                 <div className={style.top}></div>
                 <div className={style.bottom}></div>
@@ -39,8 +56,8 @@ const Admin = () => {
                     <button onClick={login}>Login</button>
                 </div>
             </div>
-        </>}
-    </>
+        </>} */}
+    </div>
     )
 }
 
