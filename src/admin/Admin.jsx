@@ -34,11 +34,11 @@ const Admin = () => {
         <nav>
             <ul>
                 <li><NavLink to={"/admin"}>Dashboard</NavLink></li>
-                <li><NavLink to={"addprant"}>प्रांत जोडा</NavLink></li>
-                <li><NavLink to={"adddistrict"}>जिल्हा जोडा</NavLink></li>
-                <li><NavLink to={"adddivision"}>तालुका जोडा</NavLink></li>
-                <li><NavLink to={"addvilage"}>गाव जोडा</NavLink></li>
                 <li><NavLink to={"addworker"}>कार्यकर्ता जोडा</NavLink></li>
+                <li><NavLink to={"addvilage"}>गाव जोडा</NavLink></li>
+                <li><NavLink to={"adddivision"}>तालुका जोडा</NavLink></li>
+                <li><NavLink to={"adddistrict"}>जिल्हा जोडा</NavLink></li>
+                <li><NavLink to={"addprant"}>प्रांत जोडा</NavLink></li>
             </ul>
         </nav>
         <div className={style.admin_container}>
