@@ -17,6 +17,7 @@ import Report from './admin/Report'
 import AddDist from './admin/AddDist'
 import AddDiv from './admin/AddDiv'
 import AddVilage from './admin/AddVilage'
+import AddWorker from './admin/AddWorker'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='adddistrict' element={<AddDist/>}/>
             <Route path='adddivision' element={<AddDiv/>}/>
             <Route path='addvilage' element={<AddVilage/>}/>
+            <Route path='addworker' element={<AddWorker/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -23,28 +23,29 @@ const Admin = () => {
                 console.log(user);
             })
             .catch((error) => {
+                alert("चुकीचा आयडी पासवर्ड")
                 const errorCode = error.code;
                 const errorMessage = error.message;
             });
     }
 
     return (<div className={style.admin}>
-        {/* {(auth === 1) ? <> */}
-        <h1>Vanvasi Kalyan Ashram</h1>
-        <nav>
-            <ul>
-                <li><NavLink to={"/admin"}>Dashboard</NavLink></li>
-                <li><NavLink to={"addworker"}>कार्यकर्ता जोडा</NavLink></li>
-                <li><NavLink to={"addvilage"}>गाव जोडा</NavLink></li>
-                <li><NavLink to={"adddivision"}>तालुका जोडा</NavLink></li>
-                <li><NavLink to={"adddistrict"}>जिल्हा जोडा</NavLink></li>
-                <li><NavLink to={"addprant"}>प्रांत जोडा</NavLink></li>
-            </ul>
-        </nav>
-        <div className={style.admin_container}>
-         <Outlet />
-        </div>
-        {/* </> : <>
+        {(auth === 1) ? <>
+            <h1>Vanvasi Kalyan Ashram</h1>
+            <nav>
+                <ul>
+                    <li><NavLink to={"/admin"}>Dashboard</NavLink></li>
+                    <li><NavLink to={"addworker"}>कार्यकर्ता जोडा</NavLink></li>
+                    <li><NavLink to={"addvilage"}>गाव जोडा</NavLink></li>
+                    <li><NavLink to={"adddivision"}>तालुका जोडा</NavLink></li>
+                    <li><NavLink to={"adddistrict"}>जिल्हा जोडा</NavLink></li>
+                    <li><NavLink to={"addprant"}>प्रांत जोडा</NavLink></li>
+                </ul>
+            </nav>
+            <div className={style.admin_container}>
+                <Outlet />
+            </div>
+        </> : <>
             <div className={style.container}>
                 <div className={style.top}></div>
                 <div className={style.bottom}></div>
@@ -56,7 +57,7 @@ const Admin = () => {
                     <button onClick={login}>Login</button>
                 </div>
             </div>
-        </>} */}
+        </>}
     </div>
     )
 }
