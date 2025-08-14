@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
 import Home from './pages/home/Home'
+import BlogPage from './pages/blogpage/BlogPage'
 import Info from './pages/info/Info'
 import DeepDive from './pages/deepdive/DeepDive'
 import Prant from './pages/deepdive/Prant'
@@ -35,6 +36,7 @@ function App() {
             <Route path='/vilages/:id' element={<Vilages/>}/>
             <Route path='/vilageinfo/:id' element={<VilageInfo/>}/>
             <Route path='/projectinfo/' element={<ProjectInfo/>}/>
+            <Route path='/blogpage' element={<BlogPage/>}/>
           </Route>
           <Route path='/admin' element={<Admin/>}>
             <Route index element={<Report/>}/>
